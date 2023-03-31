@@ -25,15 +25,13 @@ Ver el archivo pom.xml para saber qué está haciendo cada línea de código.
 ```
 mvn install
 ```
-```
 
 ### Ejecutar proyecto maven:
 ```
 mvn exec:java -Dexec.mainClass=argpromod1.App
 ```
 
-
-Estructura del proyecto:
+### Estructura del proyecto:
 ```
 .
 ├── README.md
@@ -41,10 +39,9 @@ Estructura del proyecto:
 └── src
     └── main
         └── java
-            └── argpromod1
-                ├── App.java    
-                └── Person.java 
-
+            ├── app
+            └── App.java
+   
 ```
 
 ------
