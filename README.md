@@ -39,8 +39,8 @@ mvn exec:java -Dexec.mainClass=argpromod1.App
 └── src
     └── main
         └── java
-            ├── app
-            └── App.java
+            ├── App.java
+            └── Persona.java
    
 ```
 
