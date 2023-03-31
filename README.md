@@ -8,12 +8,7 @@ Este es un proyecto único de Java donde practiqué lombok.
 ````
 1. @Getter
 2. @Setter
-3. @EqualsAndHashCode(of = {"sentence", "val"})
-4. @ToString(exclude = "val")
-5. @Builder
-6. @RequiredArgsConstructor, generates a constructor for all final fields, with parameter order same as field order
-7. @NoArgsConstructor creates an empty constructor.
-8. @AllArgsConstructor creates a constructor for all fields
+3. @NoArgsConstructor creates an empty constructor.
 ````
 ## **Notas:**
 Ver el archivo pom.xml para saber qué está haciendo cada línea de código.
