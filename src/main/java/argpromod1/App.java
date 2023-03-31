@@ -1,9 +1,9 @@
 package argpromod1;
-import java.util.Date;
+import java.time.*;
 import java.util.ArrayList;
 import java.util.Scanner;
-//import SimpleDateFormat
-import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Ejercio 10 - ArgProMod1
  *
@@ -24,12 +24,12 @@ public class App
     apellido = sc.nextLine();
     System.out.println("Ingrese fecha de nacimiento (dd/MM/yyyy)");
     fechaString = sc.nextLine();
-    Date fecha = null;
+    LocalDate fecha = null;
 
     try {
-        fecha = new SimpleDateFormat("dd/MM/yyyy").parse(fechaString);
+        fecha = LocalDate.parse(fechaString, DateTimeFormatter.ofPattern("d/M/yyyy"));
     } catch (Exception e) {
-        System.out.println("Error al convertir la fecha. Asegúrese de ingresarla en el formato dd/mm/yyyy.");
+        System.out.println("Error al convertir la fecha. \nAsegúrese de ingresarla en el formato dd/mm/yyyy.");
         return;
     }
 
@@ -52,7 +52,7 @@ public class App
         fechaString = sc.nextLine();
         fecha = null;
         try {
-            fecha = new SimpleDateFormat("dd/MM/yyyy").parse(fechaString);
+            fecha = LocalDate.parse(fechaString, DateTimeFormatter.ofPattern("d/M/yyyy"));
         } catch (Exception e) {
             System.out.println("Error al convertir la fecha. Asegúrese de ingresarla en el formato dd/mm/yyyy.");
             return;

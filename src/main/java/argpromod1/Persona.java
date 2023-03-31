@@ -1,7 +1,7 @@
 package argpromod1;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.*;
 import lombok.*;
+import java.time.format.DateTimeFormatter;
 
 @NoArgsConstructor
 @Getter
@@ -11,18 +11,17 @@ import lombok.*;
 public class Persona {
     private String nombre;
     private String apellido;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
 
-    public Persona(String nombre, String apellido, Date fechaNacimiento) {
+    public Persona(String nombre, String apellido, LocalDate fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
     }
     @Override
     public String toString() { 
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
-        String fechaFormateada = formatoFecha.format(this.fechaNacimiento);
-        return "Nombre=" + nombre + ",\nApellido=" + apellido + ",\nFecha de Nacimiento=" + fechaFormateada + ".\n";
+        String fechaString  = fechaNacimiento.format(DateTimeFormatter.ofPattern("d/M/yyyy"));
+        return "Nombre= " + nombre + ",\nApellido= " + apellido + ",\nFecha de Nacimiento= " + fechaString + ".\n";
     }
 
 }
